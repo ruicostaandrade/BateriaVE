@@ -83,7 +83,7 @@
         
         formattedHours = String(adjustedHours).padStart(2, '0');
         formattedMinutes = String(adjustedMinutes % 60).padStart(2, '0'); // Ensure minutes stay in valid range
-        output = `24 - ${formattedHours}:${formattedMinutes}`;
+        output = `${formattedHours}:${formattedMinutes}`;
       } else {
         // For results 2 hours or greater, use HH:MM
         formattedHours = String(hours).padStart(2, '0');
