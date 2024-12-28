@@ -34,7 +34,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Calculador de bateria VE 2</h1>
+    <h1>Calculador de bateria VE 3</h1>
     <label for="option">Escolhe a viatura:</label>
     <select id="option">
       <option value="Peugeot">Peugeot</option>
@@ -63,9 +63,9 @@
       let result;
 
       // Apply formulas based on selected option
-      if (option === 'A') {
+      if (option === 'Peugeot') {
         result = ((46.2 * 0.8) - (46.2 * (inputValue / 100))) / 3.45; // Formula for Option A: Multiply by 2
-      } else if (option === 'B') {
+      } else if (option === 'Renault') {
         result = ((37 * 0.8) - (37 * (inputValue / 100))) / 3.45; // Formula for Option B: Add 10
       }
 
