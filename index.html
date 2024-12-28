@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    .result {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Simple Formula Calculator</h1>
+    <label for="input1">Input 1:</label>
+    <input type="number" id="input1" placeholder="Enter first number" />
+    <label for="input2">Input 2:</label>
+    <input type="number" id="input2" placeholder="Enter second number" />
+    <button onclick="calculate()">Calculate</button>
+    <div class="result" id="result">Result: --</div>
+  </div>
+
+  <script>
+    // Function to calculate the result based on a formula
+    function calculate() {
+      const input1 = parseFloat(document.getElementById('input1').value);
+      const input2 = parseFloat(document.getElementById('input2').value);
+
+      if (isNaN(input1) || isNaN(input2)) {
+        document.getElementById('result').innerText = 'Result: Please enter valid numbers!';
+        return;
+      }
+
+      // Replace the formula below with your desired calculation
+      const result = (input1 + input2) * 2; // Example: (Input1 + Input2) * 2
+
+      document.getElementById('result').innerText = `Result: ${result}`;
+    }
+  </script>
+</body>
+</html>
