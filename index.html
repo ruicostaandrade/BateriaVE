@@ -33,7 +33,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Calculator de bacteria VE</h1>
+    <h1>Calculator de bateria VE</h1>
     <label for="option">Qual a viatura?</label>
     <select id="option">
       <option value="Peugeot e2008">Peugeot e2008</option>
@@ -57,9 +57,9 @@
 
       let result;
       if (selectedOption === 'Peugeot e2008') {
-        result = 3.45//(((46.2 * 0.8) -(46.2 * (inputValue/100)))/3.45; // Formula for Option A: multiply input by 2
+        result = (((46.2 * 0.8) - (46.2 * (inputValue / 100))) / 3.45; // Formula for Option A: multiply input by 2
       } else if (selectedOption === 'Renault Zoe') {
-        result = 3.55//(((46.2 * 0.8) -(46.2 * (inputValue/100)))/3.45; // Formula for Option B: add 10 to input
+        result = (((46.2 * 0.8) - (46.2 * (inputValue / 100))) / 3.45; // Formula for Option B: add 10 to input
       }
 
       document.getElementById('result').innerText = `Result: ${result}`;
