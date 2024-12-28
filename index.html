@@ -34,7 +34,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Calculador de bateria VE 6</h1>
+    <h1>Calculador de bateria VE 7</h1>
     <label for="option">Escolhe a viatura:</label>
     <select id="option">
       <option value="Peugeot">Peugeot</option>
@@ -79,7 +79,7 @@
 
       if (result < 2) {
         // For results smaller than 2 hours, calculate 24 - HH:MM
-        const adjustedHours = 24 - Math.floor(result); // Subtract from 24
+        const adjustedHours = 22 + Math.floor(result); // Subtract from 24
         const adjustedMinutes = Math.round((result - hours) * 60); // Adjust minutes
         
         formattedHours = String(adjustedHours).padStart(2, '0');
