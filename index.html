@@ -33,16 +33,16 @@
 </head>
 <body>
   <div class="container">
-    <h1>Dynamic Formula Calculator</h1>
-    <label for="option">Choose an Option:</label>
+    <h1>Calculator de bacteria VE</h1>
+    <label for="option">Qual a viatura?</label>
     <select id="option">
-      <option value="A">Option A</option>
-      <option value="B">Option B</option>
+      <option value="Peugeot e2008">Option A</option>
+      <option value="Renault Zoe">Option B</option>
     </select>
     <label for="inputValue">Enter a Number:</label>
-    <input type="number" id="inputValue" placeholder="Enter your number" />
-    <button onclick="calculate()">Calculate</button>
-    <div class="result" id="result">Result: --</div>
+    <input type="number" id="inputValue" placeholder="Qual a percentage de bacteria actual?" />
+    <button onclick="calculate()">Calcular</button>
+    <div class="result" id="result">Hora fim: --</div>
   </div>
 
   <script>
@@ -56,10 +56,10 @@
       }
 
       let result;
-      if (selectedOption === 'A') {
-        result = inputValue * 2; // Formula for Option A: multiply input by 2
-      } else if (selectedOption === 'B') {
-        result = inputValue + 10; // Formula for Option B: add 10 to input
+      if (selectedOption === 'Peugeot e2008') {
+        result = (((46.2 * 0.8) -(46.2 * (inputValue/100)))/3.45; // Formula for Option A: multiply input by 2
+      } else if (selectedOption === 'Renault Zoe') {
+        result = (((46.2 * 0.8) -(46.2 * (inputValue/100)))/3.45; // Formula for Option B: add 10 to input
       }
 
       document.getElementById('result').innerText = `Result: ${result}`;
