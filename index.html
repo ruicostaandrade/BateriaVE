@@ -56,26 +56,43 @@
 
       // Validate input
       if (isNaN(inputValue)) {
-        document.getElementById('result').innerText = 'Por favor introduz um número válido!';
+        document.getElementById('result').innerText = 'Result: Please enter a valid number!';
         return;
       }
 
       let result;
 
       // Apply formulas based on selected option
-      if (option === 'Peugeot') {
-        result = ((46.2 * 0.8) - (46.2 * (inputValue / 100))) / 3.45; // Formula for Peugeot
-      } else if (option === 'Renault') {
-        result = ((37 * 0.8) - (37 * (inputValue / 100))) / 3.45; // Formula for Renault
+      if (option === 'A') {
+        result = ((46.2 * 0.8) - (46.2 * (inputValue / 100))) / 3.45; // Formula for Option A: Multiply by 2
+      } else if (option === 'B') {
+        result = ((37 * 0.8) - (37 * (inputValue / 100))) / 3.45; // Formula for Option B: Add 10
       }
 
       // Convert the result to hours and minutes
       const hours = Math.floor(result); // Integer part = hours
       const minutes = Math.round((result - hours) * 60); // Fractional part * 60 = minutes
 
-      // Display the result in HH:MM format
-      document.getElementById('result').innerText = `Hora fim: ${formattedHours}:${formattedMinutes}`;
+      // Format hours and minutes
+      let formattedHours, formattedMinutes, output;
 
+      if (result < 2) {
+        // For results smaller than 2 hours, calculate 24 - HH:MM
+        const adjustedHours = 24 - Math.floor(result); // Subtract from 24
+        const adjustedMinutes = 60 - Math.round((result - hours) * 60); // Adjust minutes
+        
+        formattedHours = String(adjustedHours).padStart(2, '0');
+        formattedMinutes = String(adjustedMinutes % 60).padStart(2, '0'); // Ensure minutes stay in valid range
+        output = `24 - ${formattedHours}:${formattedMinutes}`;
+      } else {
+        // For results 2 hours or greater, use HH:MM
+        formattedHours = String(hours).padStart(2, '0');
+        formattedMinutes = String(minutes).padStart(2, '0');
+        output = `${formattedHours}:${formattedMinutes}`;
+      }
+
+      // Display the result
+      document.getElementById('result').innerText = `Result: ${output}`;
     }
   </script>
 </body>
