@@ -73,8 +73,9 @@
       const hours = Math.floor(result); // Integer part = hours
       const minutes = Math.round((result - hours) * 60); // Fractional part * 60 = minutes
 
-      // Display the result in hour-minute format
-      document.getElementById('result').innerText = `Hora de fim: ${hours}:${minutes}`;
+      // Display the result in HH:MM format
+      document.getElementById('result').innerText = `Hora fim: ${formattedHours}:${formattedMinutes}`;
+
     }
   </script>
 </body>
