@@ -34,7 +34,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Calculador de bateria VE 3</h1>
+    <h1>Calculador de bateria VE 4</h1>
     <label for="option">Escolhe a viatura:</label>
     <select id="option">
       <option value="Peugeot">Peugeot</option>
@@ -47,6 +47,7 @@
     <button onclick="calculate()">Calcular</button>
 
     <div class="result" id="result"></div>
+    <div class="resulttemp" id="resulttemp"></div>
   </div>
 
   <script>
@@ -93,6 +94,8 @@
 
       // Display the result
       document.getElementById('result').innerText = `Result: ${output}`;
+      document.getElementById('resulttemp').innerText = `Result: ${result}`;
+      
     }
   </script>
 </body>
